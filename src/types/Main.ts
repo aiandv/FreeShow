@@ -165,7 +165,7 @@ export interface ActiveEdit {
     data?: any // camera data
 }
 
-export type FileFolder = { isFolder: false; path: string; name: string; thumbnailPath?: string; stats: Stats } | { isFolder: true; path: string; name: string; files: string[] }
+export type FileFolder = { isFolder: false; path: string; name: string; thumbnailPath?: string; stats: Stats } | { isFolder: true; path: string; name: string; files: string[]; noMedia?: boolean }
 
 export type MediaFit = "contain" | "cover" | "fill" | "blur"
 export interface Media {
@@ -450,6 +450,8 @@ export type Popups =
     | "drawer_search_options"
     | "template_info"
     | "cleaning_utility"
+    | "pco_picker"
+    | "sync_folders"
 
 export type DefaultProjectNames = "date" | "today" | "sunday" | "week" | "custom" | "blank"
 
